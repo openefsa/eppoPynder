@@ -1,0 +1,3 @@
+# Exclude the following Python files
+exclude eppoPynder/api_query.py
+exclude eppoPynder/unnest_lists.py
