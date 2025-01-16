@@ -34,7 +34,7 @@ jobs:
           
       - name: Run tests
         run: |
-          coverage run -m pytest
+          coverage run -m pytest --ignore=/usr
           coverage report -m
           coverage xml
 
