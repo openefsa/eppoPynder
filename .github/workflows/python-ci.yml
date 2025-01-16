@@ -30,7 +30,7 @@ jobs:
         run: echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV  # Set PYTHONPATH to the 'src' directory
 
       - name: Set EPPO Token as environment variable
-        run: echo "EPPO_TOKEN=${{ secrets.EPPO_TOKEN }}" >> $GITHUB_ENV # Use EPPO token set under Secrets section
+        run: echo "EPPO_token=${{ secrets.EPPO_TOKEN }}" >> $GITHUB_ENV # Use EPPO token set under Secrets section
           
       - name: Run tests
         run: pytest --cov-branch --cov-report=xml
