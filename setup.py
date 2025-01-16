@@ -16,7 +16,7 @@ setup(
         'Dayana Stephanie Buzle ORCID': 'https://orcid.org/0009-0003-2990-7431',
         'Rafael Vieira ORCID': 'https://orcid.org/0009-0009-0289-5438',
         'Agata Kaczmarek ORCID': 'https://orcid.org/0000-0002-7463-5821',
-    }
+    },
     license='GPL-3.0',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
