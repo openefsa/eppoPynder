@@ -43,13 +43,13 @@ def query_the_whole_eppo(queried_eppocode, base_url = "https://data.eppo.int/api
     # categorization, hosts, pests, and kingdom data.
     query_the_whole_eppo("BEMITA")
     """
-    # Ensure the token is available
     if not token:
-        raise ValueError("EPPO token is required. Please provide a valid token.")
+        token = "default_token"
+    else:
+        assert isinstance(token, str), "token must be a string!"
         
     assert isinstance(queried_eppocode, str), "queried_eppocode must be a string!"
     assert isinstance(base_url, str), "base_url must be a string!"
-    assert isinstance(token, str), "token must be a string!"
     
     services = ["", "names", "taxonomy", "categorization", "hosts", "pests", "kingdom"]
     

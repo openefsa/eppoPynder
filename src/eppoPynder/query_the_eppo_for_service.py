@@ -62,15 +62,15 @@ def query_the_eppo_for_service(queried_eppocode, base_url = "https://data.eppo.i
     # Get categorization data for Bemisia tabaci:
     query_the_eppo_for_service("BEMITA", service="categorization")
     """
-    # Ensure the token is available
-    if not token:
-        raise ValueError("EPPO token is required. Please provide a valid token.")
-
     assert isinstance(queried_eppocode, str), "queried_eppocode must be a string!"
     assert isinstance(base_url, str), "base_url must be a string!"
     assert isinstance(service, str), "service must be a string!"
-    assert isinstance(token, str), "token must be a string!"
-    
+
+    if not token:
+        token = "default_token"
+    else:
+        assert isinstance(token, str), "token must be a string!"
+
     queried_url = base_url+queried_eppocode+"/"+service+"?authtoken="+token
     
     if service == "":

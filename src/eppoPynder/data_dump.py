@@ -36,12 +36,11 @@ def data_dump(codes_to_scan, token = os.getenv('EPPO_token')):
     # Create a dump of all data about Aphis pomi and Leucoptera malifoliella: basic information, all names, taxonomy, categorization, hosts, pests and kingdom data.
     data_dump(["APHIPO", "LEUCSC"])
     """
-    # Ensure the token is available
     if not token:
-        raise ValueError("EPPO token is required. Please provide a valid token.")
+        token = "default_token"
+    else:
+        assert isinstance(token, str), "token must be a string!"
 
-    # Add input validation
-    assert isinstance(token, str), "Token must be a string!"
     if not isinstance(codes_to_scan, list):
         raise AssertionError("Input must be a list!")
     if not codes_to_scan:
