@@ -16,13 +16,19 @@ class TestQueryTheEPPOForService(unittest.TestCase):
         result = query_the_eppo_for_service("BEMITA", service="wrongservice")
         self.assertEqual(result.shape[1], 3)
 
-    def test_missing_token(self):
-        # Test when token is None
-        with self.assertRaises(ValueError) as context:
-            query_the_eppo_for_service("BEMITA", token=None)
-        self.assertEqual(str(context.exception), "EPPO token is required. Please provide a valid token.")
-        
-        # Test when token is an empty string
-        with self.assertRaises(ValueError) as context:
-            query_the_eppo_for_service("BEMITA", token="")
-        self.assertEqual(str(context.exception), "EPPO token is required. Please provide a valid token.")
+    def test_default_token_assignment(self):
+        with patch('eppoPynder.query_the_eppo_for_service.api_query') as mock_api:
+            # Configure mock to return an empty DataFrame
+            mock_api.return_value = pd.DataFrame()
+            
+            # Call function without a token
+            result = query_the_eppo_for_service("BEMITA", token=None)
+            
+            # Get the call arguments
+            call_args = mock_api.call_args
+            
+            # Extract the queried_url from the kwargs
+            queried_url = call_args.kwargs['queried_url']
+            
+            # Verify that default_token was used in the URL
+            self.assertIn('authtoken=default_token', queried_url)
