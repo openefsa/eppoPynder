@@ -22,9 +22,6 @@ jobs:
           pip install -r requirements.txt
           pip install codecov
           pip install -e .
-          pip list
-          python -c "import sys; print(sys.path)"
-          python -c "import eppopynder; print(eppopynder.__file__)"
 
       - name: Run tests with coverage
         env:
