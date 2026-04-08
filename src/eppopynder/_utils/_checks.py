@@ -90,7 +90,7 @@ def _check_services(services, choices):
 
     if len(invalid_services_) > 0:
         raise ValueError("Unsupported services requested: "
-                         + f"{", ".join(invalid_services_)}")
+                         + f"{', '.join(invalid_services_)}")
 
 
 def _require_column_names(dataframe, column_names):
@@ -117,7 +117,7 @@ def _require_column_names(dataframe, column_names):
 
     if not all(column_ in dataframe.columns for column_ in column_names):
         raise ValueError("Missing required columns in dataframe: "
-                         + f"{", ".join(column_names)}")
+                         + f"{', '.join(column_names)}")
 
 
 def _require_not_all_nan(dataframe, column_name):
