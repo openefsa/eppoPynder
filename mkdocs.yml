@@ -1,0 +1,13 @@
+site_name: eppoPynder
+site_description: Python interface to the EPPO Database and Public APIs
+site_url: https://openefsa.github.io/eppoPynder
+repo_url: https://github.com/openefsa/eppoPynder
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: 'index.md'
+  - 'Get started': 'guide.md'
