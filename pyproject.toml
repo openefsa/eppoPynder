@@ -3,7 +3,7 @@ requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "eppopynder"
+name = "eppoPynder"
 version = "2.0.0"
 description = "Python interface to the EPPO Database and Public APIs"
 readme = "README.md"
