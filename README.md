@@ -43,7 +43,7 @@ from eppopynder import *
 ```
 
 Basic usage examples and full documentation are available in the package
-[guide](docs/guide.md).
+[guide](https://openefsa.github.io/eppoPynder/guide/).
 
 ## Authors and maintainers
 
@@ -55,6 +55,7 @@ Basic usage examples and full documentation are available in the package
 
 ## Links
 
-- **Homepage**: [GitHub](https://github.com/openefsa/eppoPynder).
-- **Bug Tracker**: [Issues on GitHub](https://github.com/openefsa/eppoPynder/issues).
-- **EPPO Database**: [https://gd.eppo.int](https://gd.eppo.int).
+- **Source code**: [GitHub - openefsa/eppoPynder](https://github.com/openefsa/eppoPynder).
+- **Bug tracker**: [Issues on GitHub](https://github.com/openefsa/eppoPynder/issues).
+- **EPPO Global Database**: [https://gd.eppo.int](https://gd.eppo.int).
+- **EPPO APIs:** [https://data.eppo.int/apis/](https://data.eppo.int/apis/).
