@@ -34,7 +34,7 @@ dev = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/openefsa/eppoPynder"
+"Homepage" = "https://openefsa.github.io/eppoPynder/"
 "Repository" = "https://github.com/openefsa/eppoPynder"
 "Bug Tracker" = "https://github.com/openefsa/eppoPynder/issues"
 
