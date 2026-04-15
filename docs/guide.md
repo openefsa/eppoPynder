@@ -111,7 +111,7 @@ help(function_name)
 This will show the full documentation for the function, including its
 arguments, return values, and usage examples.
 
-For example, if you are working with the `uniform_taxonoy()` function,
+For example, if you are working with the `uniform_taxonomy()` function,
 you can check its documentation with:
 
 ```python
@@ -131,14 +131,14 @@ Note that the functions representing the categories are all defined inside the
 ## Querying a specific category
 
 The *eppoPynder* package allows you to query all categories available in
-version 2.0 of the EPPO APIs: General, Taxons, Taxon, Country, Tools, Reporting
-Services, and References.
+version 2.0 of the EPPO APIs: General, Taxons, Taxon, Country, RPPO, Tools,
+Reporting Service, and References.
 
 Each category has a corresponding function in the package with the same name
-in *snake_case* format: general(), taxons(), taxon(), country(), tools(),
-reporting_service(), and reportings(). By default, these functions return all
-data available under the selected category, but you can customize the query by
-specifying the desired services.
+in *snake_case* format: general(), taxons(), taxon(), country(), rppo(),
+tools(), reporting_service(), and references(). By default, these functions
+return all  data available under the selected category, but you can customize
+the query by specifying the desired services.
 
 For example, to query all services of the Taxon category for the EPPO code
 "BEMITA", you can use the following code:
