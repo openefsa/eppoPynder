@@ -203,7 +203,7 @@ client = Client(api_key=&quot;&lt;your_eppo_api_key&gt;&quot;) # Manually define
 </code></pre>
 <p>This will show the full documentation for the function, including its
 arguments, return values, and usage examples.</p>
-<p>For example, if you are working with the <code>uniform_taxonoy()</code> function,
+<p>For example, if you are working with the <code>uniform_taxonomy()</code> function,
 you can check its documentation with:</p>
 <pre><code class="language-python">help(uniform_taxonomy)
 </code></pre>
@@ -215,13 +215,13 @@ category, you can run:</p>
 <code>Client</code> class.</p>
 <h2 id="querying-a-specific-category">Querying a specific category</h2>
 <p>The <em>eppoPynder</em> package allows you to query all categories available in
-version 2.0 of the EPPO APIs: General, Taxons, Taxon, Country, Tools, Reporting
-Services, and References.</p>
+version 2.0 of the EPPO APIs: General, Taxons, Taxon, Country, RPPO, Tools,
+Reporting Service, and References.</p>
 <p>Each category has a corresponding function in the package with the same name
-in <em>snake_case</em> format: general(), taxons(), taxon(), country(), tools(),
-reporting_service(), and reportings(). By default, these functions return all
-data available under the selected category, but you can customize the query by
-specifying the desired services.</p>
+in <em>snake_case</em> format: general(), taxons(), taxon(), country(), rppo(),
+tools(), reporting_service(), and references(). By default, these functions
+return all  data available under the selected category, but you can customize
+the query by specifying the desired services.</p>
 <p>For example, to query all services of the Taxon category for the EPPO code
 "BEMITA", you can use the following code:</p>
 <pre><code class="language-python">data = client.taxon(eppo_codes=[&quot;BEMITA&quot;])
