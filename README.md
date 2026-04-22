@@ -15,7 +15,7 @@ protection who require convenient programmatic access to EPPO data.
 
 ## Installation
 
-### From PyPi
+### From PyPI
 
 ```
 pip install eppoPynder
