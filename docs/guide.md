@@ -13,7 +13,7 @@ protection who require convenient programmatic access to EPPO data.
 
 ## Installation
 
-### From PyPi
+### From PyPI
 
 ```bash
 $ pip install eppoPynder
